@@ -7,6 +7,7 @@ import { UPDATE_PRODUCTS } from '../utils/actions';
 
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from '../assets/spinner.gif'
+import Cart from '../components/Cart';
 
 function Detail() {
   // const { id } = useParams();
@@ -20,7 +21,7 @@ function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
-  const [ currentProduct, setCurrentProduct ] = useState({});
+  const [currentProduct, setCurrentProduct] = useState({});
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
@@ -72,6 +73,7 @@ function Detail() {
       {
         loading ? <img src={spinner} alt="loading" /> : null
       }
+      <Cart />
     </>
   );
 };
