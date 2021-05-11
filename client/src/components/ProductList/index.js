@@ -8,18 +8,6 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 
 function ProductList() {
-  // const { loading, data } = useQuery(QUERY_PRODUCTS);
-
-  // const products = data?.products || [];
-
-  // function filterProducts() {
-  //   if (!currentCategory) {
-  //     return products;
-  //   }
-
-  //   return products.filter(product => product.category._id === currentCategory);
-  // }
-
   const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
