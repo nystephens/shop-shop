@@ -1,5 +1,4 @@
-import { useReducer, userReducer } from 'react';
-import { init } from '../../../server/models/Order';
+import { useReducer } from 'react';
 import {
     UPDATE_PRODUCTS,
     UPDATE_CATEGORIES,
